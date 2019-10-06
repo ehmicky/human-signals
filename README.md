@@ -110,6 +110,11 @@ _Type_: `string`<br>_Enum_: `'ansi'`, `'posix'`, `'bsd'`, `'systemv'`, `'other'`
 
 Which standard defined that signal.
 
+# Related
+
+- [`human-exit-codes`](https://github.com/ehmicky/human-exit-codes):
+  human-friendly exit codes
+
 # Support
 
 If you found a bug or would like a new feature, _don't hesitate_ to
