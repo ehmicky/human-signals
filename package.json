@@ -52,7 +52,7 @@
     "core-js": "^3.2.1"
   },
   "devDependencies": {
-    "@ehmicky/dev-tasks": "^0.30.46",
+    "@ehmicky/dev-tasks": "^0.30.47",
     "ajv": "^6.10.2",
     "ava": "^2.4.0",
     "fast-deep-equal": "^2.0.1",
