@@ -100,7 +100,7 @@ What is the default action for this signal when it is not handled.
 
 _Type_: `boolean`
 
-Whether the signal default action cannot be prevented. This is `true` for
+Whether the signal's default action cannot be prevented. This is `true` for
 `SIGTERM`, `SIGKILL` and `SIGSTOP`.
 
 ### signal.source
