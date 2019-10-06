@@ -12,11 +12,11 @@ const getSignalsByName = function() {
 
 const getSignalByName = function(
   signalByNameMemo,
-  { name, number, action, description, source },
+  { name, number, description, action, priority, source },
 ) {
   return {
     ...signalByNameMemo,
-    [name]: { name, number, action, description, source },
+    [name]: { name, number, description, action, priority, source },
   }
 }
 
@@ -41,8 +41,8 @@ const getSignalByNumber = function(number, signals) {
     return {}
   }
 
-  const { name, action, description, source } = signal
-  return { [number]: { name, number, action, description, source } }
+  const { name, description, action, priority, source } = signal
+  return { [number]: { name, number, description, action, priority, source } }
 }
 
 // Several signals might end up sharing the same number because of OS-specific

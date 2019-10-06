@@ -7,9 +7,37 @@
 
 Human-friendly process signals.
 
-Work in progress!
+This contains a list of known process signals.
+
+Unlike
+[`os.constants.signals`](https://nodejs.org/api/os.html#os_signal_constants),
+this includes human-friendly description, handler default action and priority.
 
 # Example
+
+```js
+const { signalsByName, signalsByNumber } = require('human-signal')
+
+console.log(signalsByName.SIGTERM)
+// {
+//   name: 'SIGINT',
+//   number: 2,
+//   description: 'User interruption with CTRL-C',
+//   action: 'terminate',
+//   priority: false,
+//   source: 'ansi'
+// }
+
+console.log(signalsByNumber[8])
+// {
+//   name: 'SIGFPE',
+//   number: 8,
+//   action: 'core',
+//   description: 'Floating point arithmetic error',
+//   priority: false,
+//   source: 'ansi'
+// }
+```
 
 # Install
 
@@ -18,6 +46,64 @@ npm install human-signal
 ```
 
 # Usage
+
+## signalsByName
+
+_Type_: `object`
+
+Object whose keys are signal [names](#signalname) and values are
+[signal objects](#signal).
+
+## signalsByNumber
+
+_Type_: `object`
+
+Object whose keys are signal [numbers](#signalnumber) and values are
+[signal objects](#signal).
+
+## signal
+
+_Type_: `object`
+
+### signal.name
+
+_Type_: `string`
+
+Standard name of the signal such as `'SIGINT'`.
+
+### signal.number
+
+_Type_: `number`
+
+Code number of the signal such as `2`. While most `number` are cross-platform,
+some are different between different OS.
+
+### signal.description
+
+_Type_: `string`
+
+Human-friendly description for the signal such as
+`'User interruption with CTRL-C'`.
+
+### signal.action
+
+_Type_: `string`<br>_Enum_: `'terminate'`, `'core'`, `'ignore'`, `'pause'`,
+`'unpause'`
+
+What is the default action for this signal when it is not handled.
+
+### signal.priority
+
+_Type_: `boolean`
+
+Whether the signal default action cannot be prevented. This is `true` for
+`SIGTERM`, `SIGKILL` and `SIGSTOP`.
+
+### signal.source
+
+_Type_: `string`<br>_Enum_: `'ansi'`, `'posix'`, `'bsd'`, `'systemv'`, `'other'`
+
+Which standards defined that signal.
 
 # Support
 

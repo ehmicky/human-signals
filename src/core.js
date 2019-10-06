@@ -78,6 +78,7 @@ export const SIGNALS = [
     action: 'terminate',
     description: 'Forced termination',
     source: 'posix',
+    priority: true,
   },
   {
     name: 'SIGUSR1',
@@ -148,6 +149,7 @@ export const SIGNALS = [
     action: 'unpause',
     description: 'Unpaused',
     source: 'posix',
+    priority: true,
   },
   {
     name: 'SIGSTOP',
@@ -155,6 +157,7 @@ export const SIGNALS = [
     action: 'pause',
     description: 'Paused',
     source: 'posix',
+    priority: true,
   },
   {
     name: 'SIGTSTP',

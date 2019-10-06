@@ -47,6 +47,14 @@ each(
 
     const ACTIONS = ['terminate', 'core', 'ignore', 'pause', 'unpause']
 
+    test(`signal.priority | ${title}`, t => {
+      t.true(
+        Object.values(signals).every(
+          ({ priority }) => typeof priority === 'boolean',
+        ),
+      )
+    })
+
     test(`signal.source | ${title}`, t => {
       t.true(
         Object.values(signals).every(({ source }) => SOURCES.includes(source)),
