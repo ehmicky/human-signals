@@ -1,79 +1,56 @@
 import test from 'ava'
 import { each } from 'test-each'
 import fastDeepEqual from 'fast-deep-equal'
+import Ajv from 'ajv'
 
 import { signalsByName, signalsByNumber } from '../src/main.js'
+
+const ajv = new Ajv({})
+
+const validate = function(value, schema) {
+  const isValid = ajv.validate(schema, value)
+
+  if (isValid) {
+    return
+  }
+
+  return ajv.errorsText(ajv.errors, { separator: '\n' })
+}
+
+const JSON_SCHEMA = {
+  type: 'object',
+  minProperties: 1,
+  additionalProperties: {
+    type: 'object',
+    properties: {
+      name: { type: 'string', pattern: 'SIG[A-Z\\d]+' },
+      number: { type: 'integer', minimum: 1, maximum: 64 },
+      description: { type: 'string', minLength: 1 },
+      supported: { type: 'boolean' },
+      action: {
+        type: 'string',
+        enum: ['terminate', 'core', 'ignore', 'pause', 'unpause'],
+      },
+      forced: { type: 'boolean' },
+      standard: {
+        type: 'string',
+        enum: ['ansi', 'posix', 'bsd', 'systemv', 'other'],
+      },
+    },
+    additionalProperties: false,
+  },
+}
 
 each(
   [
     { title: 'signalsByName', signals: signalsByName },
     { title: 'signalsByNumber', signals: signalsByNumber },
   ],
-  /* eslint-disable max-nested-callbacks */
   ({ title }, { signals }) => {
-    test(`Object | ${title}`, t => {
-      t.true(typeof signals === 'object')
+    test(`Shape | ${title}`, t => {
+      t.is(validate(signals, JSON_SCHEMA), undefined)
     })
-
-    test(`signal.name | ${title}`, t => {
-      t.true(
-        Object.values(signals).every(
-          ({ name }) => typeof name === 'string' && name.startsWith('SIG'),
-        ),
-      )
-    })
-
-    test(`signal.number | ${title}`, t => {
-      t.true(
-        Object.values(signals).every(
-          ({ number }) => Number.isInteger(number) && number >= 1,
-        ),
-      )
-    })
-
-    test(`signal.description | ${title}`, t => {
-      t.true(
-        Object.values(signals).every(
-          ({ description }) => typeof description === 'string',
-        ),
-      )
-    })
-
-    test(`signal.supported | ${title}`, t => {
-      t.true(
-        Object.values(signals).every(
-          ({ supported }) => typeof supported === 'boolean',
-        ),
-      )
-    })
-
-    test(`signal.action | ${title}`, t => {
-      t.true(
-        Object.values(signals).every(({ action }) => ACTIONS.includes(action)),
-      )
-    })
-
-    const ACTIONS = ['terminate', 'core', 'ignore', 'pause', 'unpause']
-
-    test(`signal.forced | ${title}`, t => {
-      t.true(
-        Object.values(signals).every(
-          ({ forced }) => typeof forced === 'boolean',
-        ),
-      )
-    })
-
-    test(`signal.standard | ${title}`, t => {
-      t.true(
-        Object.values(signals).every(({ standard }) =>
-          STANDARDS.includes(standard),
-        ),
-      )
-    })
-
-    const STANDARDS = ['ansi', 'posix', 'bsd', 'systemv', 'other']
   },
-  /* eslint-enable max-nested-callbacks */
 )
 
 test('Object keys | signalsByName', t => {
