@@ -13,7 +13,8 @@ Unlike
 [`os.constants.signals`](https://nodejs.org/api/os.html#os_signal_constants)
 this includes:
 
-- human-friendly description, default action and priority
+- human-friendly descriptions
+- default actions, including whether they can be prevented
 - signals not supported by the current OS, which means you can safely use this
   on any platform
 
