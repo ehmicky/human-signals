@@ -3,8 +3,8 @@ import { constants } from 'os'
 import { getSignals } from './signals.js'
 import { SIGRTMAX } from './realtime.js'
 
-// Retrieve `signalsByName`, an object mapping signal name to signal properties
-// We make sure the object is sorted by `number`
+// Retrieve `signalsByName`, an object mapping signal name to signal properties.
+// We make sure the object is sorted by `number`.
 const getSignalsByName = function() {
   const signals = getSignals()
   return signals.reduce(getSignalByName, {})
@@ -23,8 +23,8 @@ const getSignalByName = function(
 export const signalsByName = getSignalsByName()
 
 // Retrieve `signalsByNumber`, an object mapping signal number to signal
-// properties
-// We make sure the object is sorted by `number`
+// properties.
+// We make sure the object is sorted by `number`.
 const getSignalsByNumber = function() {
   const signals = getSignals()
   const length = SIGRTMAX + 1
