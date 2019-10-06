@@ -1,7 +1,7 @@
-[![Codecov](https://img.shields.io/codecov/c/github/ehmicky/human-signal.svg?label=tested&logo=codecov)](https://codecov.io/gh/ehmicky/human-signal)
-[![Travis](https://img.shields.io/badge/cross-platform-4cc61e.svg?logo=travis)](https://travis-ci.org/ehmicky/human-signal)
-[![Node](https://img.shields.io/node/v/human-signal.svg?logo=node.js)](https://www.npmjs.com/package/human-signal)
-[![Gitter](https://img.shields.io/gitter/room/ehmicky/human-signal.svg?logo=gitter)](https://gitter.im/ehmicky/human-signal)
+[![Codecov](https://img.shields.io/codecov/c/github/ehmicky/human-signals.svg?label=tested&logo=codecov)](https://codecov.io/gh/ehmicky/human-signals)
+[![Travis](https://img.shields.io/badge/cross-platform-4cc61e.svg?logo=travis)](https://travis-ci.org/ehmicky/human-signals)
+[![Node](https://img.shields.io/node/v/human-signals.svg?logo=node.js)](https://www.npmjs.com/package/human-signals)
+[![Gitter](https://img.shields.io/gitter/room/ehmicky/human-signals.svg?logo=gitter)](https://gitter.im/ehmicky/human-signals)
 [![Twitter](https://img.shields.io/badge/%E2%80%8B-twitter-4cc61e.svg?logo=twitter)](https://twitter.com/intent/follow?screen_name=ehmicky)
 [![Medium](https://img.shields.io/badge/%E2%80%8B-medium-4cc61e.svg?logo=medium)](https://medium.com/@ehmicky)
 
@@ -21,7 +21,7 @@ this includes:
 # Example
 
 ```js
-const { signalsByName, signalsByNumber } = require('human-signal')
+const { signalsByName, signalsByNumber } = require('human-signals')
 
 console.log(signalsByName.SIGTERM)
 // {
@@ -47,7 +47,7 @@ console.log(signalsByNumber[8])
 # Install
 
 ```bash
-npm install human-signal
+npm install human-signals
 ```
 
 # Usage
@@ -116,7 +116,7 @@ If you found a bug or would like a new feature, _don't hesitate_ to
 [submit an issue on GitHub](../../issues).
 
 For other questions, feel free to
-[chat with us on Gitter](https://gitter.im/ehmicky/human-signal).
+[chat with us on Gitter](https://gitter.im/ehmicky/human-signals).
 
 Everyone is welcome regardless of personal background. We enforce a
 [Code of conduct](CODE_OF_CONDUCT.md) in order to promote a positive and
@@ -137,6 +137,6 @@ If you would like to help us fix a bug or add a new feature, please check our
 
 <!-- ALL-CONTRIBUTORS-LIST:START -->
 <!-- prettier-ignore -->
-<table><tr><td align="center"><a href="https://twitter.com/ehmicky"><img src="https://avatars2.githubusercontent.com/u/8136211?v=4" width="100px;" alt="ehmicky"/><br /><sub><b>ehmicky</b></sub></a><br /><a href="https://github.com/ehmicky/human-signal/commits?author=ehmicky" title="Code">💻</a> <a href="#design-ehmicky" title="Design">🎨</a> <a href="#ideas-ehmicky" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/ehmicky/human-signal/commits?author=ehmicky" title="Documentation">📖</a></td></tr></table>
+<table><tr><td align="center"><a href="https://twitter.com/ehmicky"><img src="https://avatars2.githubusercontent.com/u/8136211?v=4" width="100px;" alt="ehmicky"/><br /><sub><b>ehmicky</b></sub></a><br /><a href="https://github.com/ehmicky/human-signals/commits?author=ehmicky" title="Code">💻</a> <a href="#design-ehmicky" title="Design">🎨</a> <a href="#ideas-ehmicky" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/ehmicky/human-signals/commits?author=ehmicky" title="Documentation">📖</a></td></tr></table>
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->

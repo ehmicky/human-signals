@@ -1,5 +1,5 @@
 {
-  "name": "human-signal",
+  "name": "human-signals",
   "version": "1.0.0",
   "main": "build/src/main.js",
   "files": [
@@ -39,9 +39,9 @@
   ],
   "license": "Apache-2.0",
   "homepage": "https://git.io/JeluP",
-  "repository": "ehmicky/human-signal",
+  "repository": "ehmicky/human-signals",
   "bugs": {
-    "url": "https://github.com/ehmicky/human-signal/issues"
+    "url": "https://github.com/ehmicky/human-signals/issues"
   },
   "author": "ehmicky <ehmicky@gmail.com> (https://github.com/ehmicky)",
   "directories": {

@@ -42,7 +42,7 @@ Command line options and/or configuration file, if any.
 Enter the following command in a terminal and copy/paste its output:
 
 ```bash
-npx envinfo --system --binaries --browsers --npmPackages human-signal
+npx envinfo --system --binaries --browsers --npmPackages human-signals
 ```
 
 **Screenshots**
