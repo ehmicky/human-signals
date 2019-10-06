@@ -10,10 +10,10 @@ Human-friendly process signals.
 This is a map of known process signals with some information about each signal.
 
 Unlike
-[`os.constants.signals`](https://nodejs.org/api/os.html#os_signal_constants),
+[`os.constants.signals`](https://nodejs.org/api/os.html#os_signal_constants)
 this includes:
 
-- human-friendly description, handler default action and priority
+- human-friendly description, default action and priority
 - signals not supported by the current OS, which means you can safely use this
   on any platform
 
@@ -73,20 +73,20 @@ _Type_: `object`
 
 _Type_: `string`
 
-Standard name of the signal such as `'SIGINT'`.
+Standard name of the signal, for example `'SIGINT'`.
 
 ### signal.number
 
 _Type_: `number`
 
-Code number of the signal such as `2`. While most `number` are cross-platform,
-some are different between different OS.
+Code number of the signal, for example `2`. While most `number` are
+cross-platform, some are different between different OS.
 
 ### signal.description
 
 _Type_: `string`
 
-Human-friendly description for the signal such as
+Human-friendly description for the signal, for example
 `'User interruption with CTRL-C'`.
 
 ### signal.action
