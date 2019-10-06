@@ -10,7 +10,7 @@ const getRealtimeSignal = function(value, index) {
     number: SIGRTMIN + index,
     action: 'terminate',
     description: 'Application-specific signal (realtime)',
-    source: 'posix',
+    standard: 'posix',
   }
 }
 

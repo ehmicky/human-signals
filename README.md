@@ -29,7 +29,7 @@ console.log(signalsByName.SIGTERM)
 //   description: 'User interruption with CTRL-C',
 //   action: 'terminate',
 //   priority: false,
-//   source: 'ansi'
+//   standard: 'ansi'
 // }
 
 console.log(signalsByNumber[8])
@@ -39,7 +39,7 @@ console.log(signalsByNumber[8])
 //   action: 'core',
 //   description: 'Floating point arithmetic error',
 //   priority: false,
-//   source: 'ansi'
+//   standard: 'ansi'
 // }
 ```
 
@@ -103,11 +103,11 @@ _Type_: `boolean`
 Whether the signal's default action cannot be prevented. This is `true` for
 `SIGTERM`, `SIGKILL` and `SIGSTOP`.
 
-### signal.source
+### signal.standard
 
 _Type_: `string`<br>_Enum_: `'ansi'`, `'posix'`, `'bsd'`, `'systemv'`, `'other'`
 
-Which standards defined that signal.
+Which standard defined that signal.
 
 # Support
 

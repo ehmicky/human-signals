@@ -21,10 +21,10 @@ const normalizeSignal = function({
   description,
   action,
   priority = false,
-  source,
+  standard,
 }) {
   const {
     signals: { [name]: numberA = number },
   } = constants
-  return { name, number: numberA, description, action, priority, source }
+  return { name, number: numberA, description, action, priority, standard }
 }

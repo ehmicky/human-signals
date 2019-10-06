@@ -55,13 +55,15 @@ each(
       )
     })
 
-    test(`signal.source | ${title}`, t => {
+    test(`signal.standard | ${title}`, t => {
       t.true(
-        Object.values(signals).every(({ source }) => SOURCES.includes(source)),
+        Object.values(signals).every(({ standard }) =>
+          STANDARDS.includes(standard),
+        ),
       )
     })
 
-    const SOURCES = ['ansi', 'posix', 'bsd', 'systemv', 'other']
+    const STANDARDS = ['ansi', 'posix', 'bsd', 'systemv', 'other']
   },
   /* eslint-enable max-nested-callbacks */
 )
