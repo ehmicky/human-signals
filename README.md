@@ -27,9 +27,9 @@ console.log(signalsByName.SIGTERM)
 // {
 //   name: 'SIGINT',
 //   number: 2,
-//   description: 'User interruption with CTRL-C',
 //   action: 'terminate',
-//   priority: false,
+//   description: 'User interruption with CTRL-C',
+//   forced: false,
 //   standard: 'ansi'
 // }
 
@@ -37,9 +37,9 @@ console.log(signalsByNumber[8])
 // {
 //   name: 'SIGFPE',
 //   number: 8,
-//   action: 'core',
 //   description: 'Floating point arithmetic error',
-//   priority: false,
+//   action: 'core',
+//   forced: false,
 //   standard: 'ansi'
 // }
 ```
@@ -97,7 +97,7 @@ _Type_: `string`<br>_Enum_: `'terminate'`, `'core'`, `'ignore'`, `'pause'`,
 
 What is the default action for this signal when it is not handled.
 
-### signal.priority
+### signal.forced
 
 _Type_: `boolean`
 

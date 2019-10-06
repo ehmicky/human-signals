@@ -47,10 +47,10 @@ each(
 
     const ACTIONS = ['terminate', 'core', 'ignore', 'pause', 'unpause']
 
-    test(`signal.priority | ${title}`, t => {
+    test(`signal.forced | ${title}`, t => {
       t.true(
         Object.values(signals).every(
-          ({ priority }) => typeof priority === 'boolean',
+          ({ forced }) => typeof forced === 'boolean',
         ),
       )
     })

@@ -14,17 +14,17 @@ export const getSignals = function() {
 // Signal numbers are OS-specific. This is taken into account by
 // `os.constants.signals`. However we provide a default `number` since some
 // signals are not defined for some OS.
-// This also sets default `priority` to `false`
+// This also sets default `forced` to `false`
 const normalizeSignal = function({
   name,
   number,
   description,
   action,
-  priority = false,
+  forced = false,
   standard,
 }) {
   const {
     signals: { [name]: numberA = number },
   } = constants
-  return { name, number: numberA, description, action, priority, standard }
+  return { name, number: numberA, description, action, forced, standard }
 }
