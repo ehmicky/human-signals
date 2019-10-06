@@ -7,11 +7,15 @@
 
 Human-friendly process signals.
 
-This contains a list of known process signals.
+This is a map of known process signals with some information about each signal.
 
 Unlike
 [`os.constants.signals`](https://nodejs.org/api/os.html#os_signal_constants),
-this includes human-friendly description, handler default action and priority.
+this includes:
+
+- human-friendly description, handler default action and priority
+- signals not supported by the current OS, which means you can safely use this
+  on any platform
 
 # Example
 
