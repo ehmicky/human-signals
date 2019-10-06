@@ -27,8 +27,9 @@ console.log(signalsByName.SIGTERM)
 // {
 //   name: 'SIGINT',
 //   number: 2,
-//   action: 'terminate',
 //   description: 'User interruption with CTRL-C',
+//   supported: true,
+//   action: 'terminate',
 //   forced: false,
 //   standard: 'ansi'
 // }
@@ -38,6 +39,7 @@ console.log(signalsByNumber[8])
 //   name: 'SIGFPE',
 //   number: 8,
 //   description: 'Floating point arithmetic error',
+//   supported: true,
 //   action: 'core',
 //   forced: false,
 //   standard: 'ansi'
@@ -56,55 +58,67 @@ npm install human-signals
 
 _Type_: `object`
 
-Object whose keys are signal [names](#signalname) and values are
+Object whose keys are signal [names](#name) and values are
 [signal objects](#signal).
 
 ## signalsByNumber
 
 _Type_: `object`
 
-Object whose keys are signal [numbers](#signalnumber) and values are
+Object whose keys are signal [numbers](#number) and values are
 [signal objects](#signal).
 
 ## signal
 
 _Type_: `object`
 
-### signal.name
+Signal object with the following properties.
+
+### name
 
 _Type_: `string`
 
 Standard name of the signal, for example `'SIGINT'`.
 
-### signal.number
+### number
 
 _Type_: `number`
 
 Code number of the signal, for example `2`. While most `number` are
 cross-platform, some are different between different OS.
 
-### signal.description
+### description
 
 _Type_: `string`
 
 Human-friendly description for the signal, for example
 `'User interruption with CTRL-C'`.
 
-### signal.action
+### supported
+
+_Type_: `boolean`
+
+Whether the current OS can handle this signal in Node.js using
+[`process.on(name, handler)`](https://nodejs.org/api/process.html#process_signal_events).
+
+The list of supported signals
+[is OS-specific](https://github.com/ehmicky/cross-platform-node-guide/blob/master/docs/6_networking_ipc/signals.md#cross-platform-signals).
+
+### action
 
 _Type_: `string`<br>_Enum_: `'terminate'`, `'core'`, `'ignore'`, `'pause'`,
 `'unpause'`
 
 What is the default action for this signal when it is not handled.
 
-### signal.forced
+### forced
 
 _Type_: `boolean`
 
 Whether the signal's default action cannot be prevented. This is `true` for
 `SIGTERM`, `SIGKILL` and `SIGSTOP`.
 
-### signal.standard
+### standard
 
 _Type_: `string`<br>_Enum_: `'ansi'`, `'posix'`, `'bsd'`, `'systemv'`, `'other'`
 

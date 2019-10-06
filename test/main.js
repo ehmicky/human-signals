@@ -39,6 +39,14 @@ each(
       )
     })
 
+    test(`signal.supported | ${title}`, t => {
+      t.true(
+        Object.values(signals).every(
+          ({ supported }) => typeof supported === 'boolean',
+        ),
+      )
+    })
+
     test(`signal.action | ${title}`, t => {
       t.true(
         Object.values(signals).every(({ action }) => ACTIONS.includes(action)),

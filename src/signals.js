@@ -11,20 +11,24 @@ export const getSignals = function() {
   return signals
 }
 
-// Signal numbers are OS-specific. This is taken into account by
-// `os.constants.signals`. However we provide a default `number` since some
-// signals are not defined for some OS.
-// This also sets default `forced` to `false`
+// Normalize signal:
+//  - `number`: signal numbers are OS-specific. This is taken into account by
+//    `os.constants.signals`. However we provide a default `number` since some
+//     signals are not defined for some OS.
+//  - `forced`: set default to `false`
+//  - `supported`: set value
 const normalizeSignal = function({
   name,
-  number,
+  number: defaultNumber,
   description,
   action,
   forced = false,
   standard,
 }) {
   const {
-    signals: { [name]: numberA = number },
+    signals: { [name]: constantSignal },
   } = constants
-  return { name, number: numberA, description, action, forced, standard }
+  const supported = constantSignal !== undefined
+  const number = supported ? constantSignal : defaultNumber
+  return { name, number, description, supported, action, forced, standard }
 }
