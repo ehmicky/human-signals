@@ -48,9 +48,7 @@
     "lib": "src",
     "test": "test"
   },
-  "dependencies": {
-    "core-js": "^3.3.2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@ehmicky/dev-tasks": "^0.30.48",
     "ajv": "^6.10.2",
