@@ -49,7 +49,7 @@
     "test": "test"
   },
   "dependencies": {
-    "core-js": "^3.2.1"
+    "core-js": "^3.3.2"
   },
   "devDependencies": {
     "@ehmicky/dev-tasks": "^0.30.47",
