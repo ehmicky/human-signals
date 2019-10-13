@@ -22,7 +22,7 @@ this includes:
 ```js
 const { signalsByName, signalsByNumber } = require('human-signals')
 
-console.log(signalsByName.SIGTERM)
+console.log(signalsByName.SIGINT)
 // {
 //   name: 'SIGINT',
 //   number: 2,
