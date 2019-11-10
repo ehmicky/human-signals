@@ -105,8 +105,8 @@ The list of supported signals
 
 ### action
 
-_Type_: `string`<br>_Enum_: `'terminate'`, `'core'`, `'ignore'`, `'pause'`,
-`'unpause'`
+_Type_: `string`\
+_Enum_: `'terminate'`, `'core'`, `'ignore'`, `'pause'`, `'unpause'`
 
 What is the default action for this signal when it is not handled.
 
@@ -119,7 +119,8 @@ Whether the signal's default action cannot be prevented. This is `true` for
 
 ### standard
 
-_Type_: `string`<br>_Enum_: `'ansi'`, `'posix'`, `'bsd'`, `'systemv'`, `'other'`
+_Type_: `string`\
+_Enum_: `'ansi'`, `'posix'`, `'bsd'`, `'systemv'`, `'other'`
 
 Which standard defined that signal.
 
