@@ -53,7 +53,7 @@
     "@ehmicky/dev-tasks": "^0.30.60",
     "ajv": "^6.10.2",
     "ava": "^2.4.0",
-    "fast-deep-equal": "^2.0.1",
+    "fast-deep-equal": "^3.0.1",
     "gulp": "^4.0.2",
     "husky": "^3.1.0",
     "test-each": "^1.8.0"
