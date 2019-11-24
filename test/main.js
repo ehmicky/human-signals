@@ -68,6 +68,7 @@ test('Object keys | signalsByNumber', t => {
 test('Same signals', t => {
   t.true(
     Object.values(signalsByNumber).every(signal =>
+      // TODO: replace with util.isDeepStrictEqual() after dropping support for Node 8
       fastDeepEqual(signal, signalsByName[signal.name]),
     ),
   )
