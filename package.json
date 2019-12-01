@@ -50,7 +50,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@ehmicky/dev-tasks": "^0.30.61",
+    "@ehmicky/dev-tasks": "^0.30.62",
     "ajv": "^6.10.2",
     "ava": "^2.4.0",
     "fast-deep-equal": "^3.1.1",
