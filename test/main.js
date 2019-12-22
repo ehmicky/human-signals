@@ -1,6 +1,7 @@
+import { isDeepStrictEqual } from 'util'
+
 import test from 'ava'
 import { each } from 'test-each'
-import fastDeepEqual from 'fast-deep-equal'
 import Ajv from 'ajv'
 
 import { signalsByName, signalsByNumber } from '../src/main.js'
@@ -68,8 +69,7 @@ test('Object keys | signalsByNumber', t => {
 test('Same signals', t => {
   t.true(
     Object.values(signalsByNumber).every(signal =>
-      // TODO: replace with util.isDeepStrictEqual() after dropping Node 8
-      fastDeepEqual(signal, signalsByName[signal.name]),
+      isDeepStrictEqual(signal, signalsByName[signal.name]),
     ),
   )
 })
