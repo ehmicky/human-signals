@@ -50,7 +50,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@ehmicky/dev-tasks": "^0.31.4",
+    "@ehmicky/dev-tasks": "^0.31.5",
     "ajv": "^6.10.2",
     "ava": "^3.0.0-beta.2",
     "gulp": "^4.0.2",
