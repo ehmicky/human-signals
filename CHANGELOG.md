@@ -1,6 +1,8 @@
 # 2.1.0
 
-- Typescript definitions added
+## TypeScript types
+
+- Add [TypeScript definitions](src/main.d.ts)
 
 # 2.0.0
 
