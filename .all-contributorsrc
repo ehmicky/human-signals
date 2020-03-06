@@ -20,7 +20,17 @@
         "ideas",
         "doc"
       ]
+    },
+    {
+      "login": "electrovir",
+      "name": "electrovir",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/1205860?v=4",
+      "profile": "http://www.electrovir.com",
+      "contributions": [
+        "code"
+      ]
     }
   ],
-  "contributorsPerLine": 7
+  "contributorsPerLine": 7,
+  "skipCi": true
 }
