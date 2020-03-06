@@ -48,6 +48,7 @@
     "lib": "src",
     "test": "test"
   },
+  "types": "build/src/main.d.ts",
   "dependencies": {},
   "devDependencies": {
     "@ehmicky/dev-tasks": "^0.31.9",
