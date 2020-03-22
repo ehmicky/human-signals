@@ -1,10 +1,10 @@
 // List of realtime signals with information about them
-export const getRealtimeSignals = function() {
+export const getRealtimeSignals = function () {
   const length = SIGRTMAX - SIGRTMIN + 1
   return Array.from({ length }, getRealtimeSignal)
 }
 
-const getRealtimeSignal = function(value, index) {
+const getRealtimeSignal = function (value, index) {
   return {
     name: `SIGRT${index + 1}`,
     number: SIGRTMIN + index,
