@@ -53,7 +53,7 @@
   "devDependencies": {
     "@ehmicky/dev-tasks": "^0.31.31",
     "ajv": "^6.12.0",
-    "ava": "^3.5.2",
+    "ava": "^3.6.0",
     "gulp": "^4.0.2",
     "husky": "^4.2.3",
     "test-each": "^2.0.0"
