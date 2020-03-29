@@ -1,7 +1,7 @@
 import { constants } from 'os'
 
-import { getSignals } from './signals.js'
 import { SIGRTMAX } from './realtime.js'
+import { getSignals } from './signals.js'
 
 // Retrieve `signalsByName`, an object mapping signal name to signal properties.
 // We make sure the object is sorted by `number`.

@@ -1,8 +1,8 @@
 import { isDeepStrictEqual } from 'util'
 
+import Ajv from 'ajv'
 import test from 'ava'
 import { each } from 'test-each'
-import Ajv from 'ajv'
 
 import { signalsByName, signalsByNumber } from '../src/main.js'
 
