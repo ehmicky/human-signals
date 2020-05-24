@@ -49,7 +49,7 @@ each(
   ],
   ({ title }, { signals }) => {
     test(`Shape | ${title}`, (t) => {
-      t.is(validate(signals, JSON_SCHEMA), undefined)
+      t.is(validate(signals, JSON_SCHEMA))
     })
   },
 )
