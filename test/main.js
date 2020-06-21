@@ -12,7 +12,7 @@ const validate = function (value, schema) {
   const isValid = ajv.validate(schema, value)
 
   if (isValid) {
-    return
+    return true
   }
 
   return ajv.errorsText(ajv.errors, { separator: '\n' })
@@ -49,7 +49,7 @@ each(
   ],
   ({ title }, { signals }) => {
     test(`Shape | ${title}`, (t) => {
-      t.is(validate(signals, JSON_SCHEMA))
+      t.is(validate(signals, JSON_SCHEMA), true)
     })
   },
 )
