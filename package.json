@@ -51,7 +51,7 @@
   "types": "build/src/main.d.ts",
   "dependencies": {},
   "devDependencies": {
-    "@ehmicky/dev-tasks": "^0.31.54",
+    "@ehmicky/dev-tasks": "^0.31.55",
     "ajv": "^6.12.3",
     "ava": "^3.11.0",
     "gulp": "^4.0.2",
