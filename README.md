@@ -101,7 +101,7 @@ Whether the current OS can handle this signal in Node.js using
 [`process.on(name, handler)`](https://nodejs.org/api/process.html#process_signal_events).
 
 The list of supported signals
-[is OS-specific](https://github.com/ehmicky/cross-platform-node-guide/blob/master/docs/6_networking_ipc/signals.md#cross-platform-signals).
+[is OS-specific](https://github.com/ehmicky/cross-platform-node-guide/blob/main/docs/6_networking_ipc/signals.md#cross-platform-signals).
 
 ### action
 
