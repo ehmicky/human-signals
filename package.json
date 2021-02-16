@@ -52,7 +52,6 @@
   "devDependencies": {
     "@ehmicky/dev-tasks": "^0.31.80",
     "ajv": "^6.12.6",
-    "husky": "^4.3.8",
     "test-each": "^2.0.1"
   },
   "engines": {
