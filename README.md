@@ -1,7 +1,6 @@
 [![Codecov](https://img.shields.io/codecov/c/github/ehmicky/human-signals.svg?label=tested&logo=codecov)](https://codecov.io/gh/ehmicky/human-signals)
 [![Build](https://github.com/ehmicky/human-signals/workflows/Build/badge.svg)](https://github.com/ehmicky/human-signals/actions)
 [![Node](https://img.shields.io/node/v/human-signals.svg?logo=node.js)](https://www.npmjs.com/package/human-signals)
-[![Gitter](https://img.shields.io/gitter/room/ehmicky/human-signals.svg?logo=gitter)](https://gitter.im/ehmicky/human-signals)
 [![Twitter](https://img.shields.io/badge/%E2%80%8B-twitter-4cc61e.svg?logo=twitter)](https://twitter.com/intent/follow?screen_name=ehmicky)
 [![Medium](https://img.shields.io/badge/%E2%80%8B-medium-4cc61e.svg?logo=medium)](https://medium.com/@ehmicky)
 
@@ -126,11 +125,7 @@ Which standard defined that signal.
 
 # Support
 
-If you found a bug or would like a new feature, _don't hesitate_ to
-[submit an issue on GitHub](../../issues).
-
-For other questions, feel free to
-[chat with us on Gitter](https://gitter.im/ehmicky/human-signals).
+For any question, _don't hesitate_ to [submit an issue on GitHub](../../issues).
 
 Everyone is welcome regardless of personal background. We enforce a
 [Code of conduct](CODE_OF_CONDUCT.md) in order to promote a positive and
