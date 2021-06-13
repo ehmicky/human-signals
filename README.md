@@ -18,8 +18,10 @@ this includes:
 
 # Example
 
+<!-- eslint-disable node/no-extraneous-import -->
+
 ```js
-const { signalsByName, signalsByNumber } = require('human-signals')
+import { signalsByName, signalsByNumber } from 'human-signals'
 
 console.log(signalsByName.SIGINT)
 // {
