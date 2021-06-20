@@ -18,8 +18,6 @@ this includes:
 
 # Example
 
-<!-- eslint-disable node/no-extraneous-import -->
-
 ```js
 import { signalsByName, signalsByNumber } from 'human-signals'
 
