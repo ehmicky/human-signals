@@ -2,7 +2,6 @@ import { isDeepStrictEqual } from 'util'
 
 import Ajv from 'ajv'
 import test from 'ava'
-// eslint-disable-next-line node/no-extraneous-import
 import { signalsByName, signalsByNumber } from 'human-signals'
 import { each } from 'test-each'
 
