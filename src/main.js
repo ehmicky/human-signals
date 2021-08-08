@@ -7,17 +7,22 @@ import { getSignals } from './signals.js'
 // We make sure the object is sorted by `number`.
 const getSignalsByName = function () {
   const signals = getSignals()
-  return signals.reduce(getSignalByName, {})
+  return Object.fromEntries(signals.map(getSignalByName))
 }
 
-const getSignalByName = function (
-  signalByNameMemo,
-  { name, number, description, supported, action, forced, standard },
-) {
-  return {
-    ...signalByNameMemo,
-    [name]: { name, number, description, supported, action, forced, standard },
-  }
+const getSignalByName = function ({
+  name,
+  number,
+  description,
+  supported,
+  action,
+  forced,
+  standard,
+}) {
+  return [
+    name,
+    { name, number, description, supported, action, forced, standard },
+  ]
 }
 
 export const signalsByName = getSignalsByName()
