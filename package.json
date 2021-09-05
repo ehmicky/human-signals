@@ -47,7 +47,7 @@
   },
   "types": "build/src/main.d.ts",
   "devDependencies": {
-    "@ehmicky/dev-tasks": "^1.0.43",
+    "@ehmicky/dev-tasks": "^1.0.44",
     "ajv": "^6.12.6",
     "test-each": "^3.0.1"
   },
