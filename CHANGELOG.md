@@ -1,3 +1,9 @@
+# 4.1.0
+
+## Features
+
+- Improve TypeScript types
+
 # 4.0.0
 
 ## Breaking changes
