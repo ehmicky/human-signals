@@ -9,11 +9,11 @@ import {
 } from 'human-signals'
 import { expectAssignable, expectNotAssignable, expectType } from 'tsd'
 
-expectType<Signal>(signalsByName.SIGINT)
-expectType<Signal>(signalsByNumber[1])
+expectType<Signal>(signalsByName.SIGINT!)
+expectType<Signal>(signalsByNumber[1]!)
 
 const { name, number, description, supported, action, forced, standard } =
-  signalsByName.SIGINT
+  signalsByName.SIGINT!
 expectType<SignalName>(name)
 expectType<SignalNumber>(number)
 expectType<string>(description)
