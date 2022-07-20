@@ -1,3 +1,5 @@
+import { expectAssignable, expectNotAssignable, expectType } from 'tsd'
+
 import {
   signalsByName,
   signalsByNumber,
@@ -6,8 +8,7 @@ import {
   SignalName,
   SignalAction,
   SignalStandard,
-} from 'human-signals'
-import { expectAssignable, expectNotAssignable, expectType } from 'tsd'
+} from './main.js'
 
 expectType<Signal>(signalsByName.SIGINT!)
 expectType<Signal>(signalsByNumber[1]!)
