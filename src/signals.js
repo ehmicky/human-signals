@@ -1,4 +1,4 @@
-import { constants } from 'os'
+import { constants } from 'node:os'
 
 import { SIGNALS } from './core.js'
 import { getRealtimeSignals } from './realtime.js'

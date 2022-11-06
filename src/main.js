@@ -1,4 +1,4 @@
-import { constants } from 'os'
+import { constants } from 'node:os'
 
 import { SIGRTMAX } from './realtime.js'
 import { getSignals } from './signals.js'
