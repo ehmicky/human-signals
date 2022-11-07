@@ -8,7 +8,7 @@ import {
   SignalName,
   SignalAction,
   SignalStandard,
-} from './main.js'
+} from 'human-signals'
 
 expectType<Signal>(signalsByName.SIGINT!)
 expectType<Signal>(signalsByNumber[1]!)
