@@ -20,7 +20,7 @@ export type SignalName = `SIG${string}`
  */
 export type SignalNumber = number
 
-export type Signal = {
+export interface Signal {
   /**
    * Standard name of the signal, for example 'SIGINT'.
    */
