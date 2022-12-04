@@ -1,14 +1,13 @@
-import { expectAssignable, expectNotAssignable, expectType } from 'tsd'
-
 import {
   signalsByName,
   signalsByNumber,
-  Signal,
-  SignalNumber,
-  SignalName,
-  SignalAction,
-  SignalStandard,
+  type Signal,
+  type SignalNumber,
+  type SignalName,
+  type SignalAction,
+  type SignalStandard,
 } from 'human-signals'
+import { expectAssignable, expectNotAssignable, expectType } from 'tsd'
 
 expectType<Signal>(signalsByName.SIGINT!)
 expectType<Signal>(signalsByNumber[1]!)
