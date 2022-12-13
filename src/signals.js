@@ -5,7 +5,7 @@ import { getRealtimeSignals } from './realtime.js'
 
 // Retrieve list of know signals (including realtime) with information about
 // them
-export const getSignals = function () {
+export const getSignals = () => {
   const realtimeSignals = getRealtimeSignals()
   const signals = [...SIGNALS, ...realtimeSignals].map(normalizeSignal)
   return signals
@@ -17,14 +17,14 @@ export const getSignals = function () {
 //     signals are not defined for some OS.
 //  - `forced`: set default to `false`
 //  - `supported`: set value
-const normalizeSignal = function ({
+const normalizeSignal = ({
   name,
   number: defaultNumber,
   description,
   action,
   forced = false,
   standard,
-}) {
+}) => {
   const {
     signals: { [name]: constantSignal },
   } = constants

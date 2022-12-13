@@ -7,7 +7,7 @@ import { each } from 'test-each'
 
 const ajv = new Ajv({})
 
-const validate = function (value, schema) {
+const validate = (value, schema) => {
   const isValid = ajv.validate(schema, value)
 
   if (isValid) {
