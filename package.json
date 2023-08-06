@@ -42,7 +42,10 @@
   ],
   "license": "Apache-2.0",
   "homepage": "https://www.github.com/ehmicky/human-signals",
-  "repository": "ehmicky/human-signals",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ehmicky/human-signals.git"
+  },
   "bugs": {
     "url": "https://github.com/ehmicky/human-signals/issues"
   },
