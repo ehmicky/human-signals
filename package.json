@@ -54,7 +54,7 @@
     "lib": "src"
   },
   "devDependencies": {
-    "@ehmicky/dev-tasks": "^2.0.99",
+    "@ehmicky/dev-tasks": "^2.0.100",
     "ajv": "^8.12.0",
     "test-each": "^6.0.1"
   },
