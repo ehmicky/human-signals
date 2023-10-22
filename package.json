@@ -1,6 +1,6 @@
 {
   "name": "human-signals",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "type": "module",
   "exports": {
     "types": "./build/src/main.d.ts",
