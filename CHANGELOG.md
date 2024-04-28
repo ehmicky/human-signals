@@ -1,3 +1,11 @@
+# 7.0.0
+
+## Breaking changes (types)
+
+- The `SignalName` and `Signal['name']` types in TypeScript are now stricter.
+  They only allow valid signal names like `'SIGINT'`. They do not allow
+  lowercase signals like `'sigint'` nor unknown signals like `'SIGOTHER'`.
+
 # 6.0.0
 
 ## Breaking changes
