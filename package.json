@@ -55,7 +55,7 @@
   },
   "devDependencies": {
     "@ehmicky/dev-tasks": "^3.0.4",
-    "ajv": "^8.16.0",
+    "ajv": "^8.17.1",
     "test-each": "^7.0.0"
   },
   "engines": {
