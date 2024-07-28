@@ -1,3 +1,20 @@
+# 8.0.0
+
+## Breaking changes (types)
+
+- The `SignalNumber` and `Signal['number']` types in TypeScript are now
+  stricter. They only allow valid signal numbers like 1 or 9. They do not allow
+  invalid signal numbers like -1, 1.5 or 999. Please note that 0 is not
+  considered a valid signal number, although it can be passed to
+  `process.kill()`.
+
+## Types
+
+- The `signalsByName[signalName]` and `signalsByNumber[signalNumber]` types in
+  TypeScript are now `Signal` instead of `Signal | undefined`. This means you
+  can now do `signalsByName[signalName].description` instead of
+  `signalsByName[signalName]!.description`.
+
 # 7.0.0
 
 ## Breaking changes (types)
