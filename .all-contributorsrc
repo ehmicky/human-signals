@@ -30,9 +30,20 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "FelixZY",
+      "name": "Felix Zedén Yverås",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2656517?v=4",
+      "profile": "https://fzy.se",
+      "contributions": [
+        "code",
+        "test"
+      ]
     }
   ],
   "contributorsPerLine": 7,
   "skipCi": true,
-  "commitConvention": "none"
+  "commitConvention": "none",
+  "commitType": "docs"
 }
