@@ -20,14 +20,14 @@ expectType<boolean>(sigintSignal.forced)
 expectType<SignalStandard>(sigintSignal.standard)
 
 const sigintOne = signalsByNumber[1]
-expectType<Signal | undefined>(sigintOne)
-expectType<SignalName>(sigintOne!.name)
-expectType<SignalNumber>(sigintOne!.number)
-expectType<string>(sigintOne!.description)
-expectType<boolean>(sigintOne!.supported)
-expectType<SignalAction>(sigintOne!.action)
-expectType<boolean>(sigintOne!.forced)
-expectType<SignalStandard>(sigintOne!.standard)
+expectType<Signal>(sigintOne)
+expectType<SignalName>(sigintOne.name)
+expectType<SignalNumber>(sigintOne.number)
+expectType<string>(sigintOne.description)
+expectType<boolean>(sigintOne.supported)
+expectType<SignalAction>(sigintOne.action)
+expectType<boolean>(sigintOne.forced)
+expectType<SignalStandard>(sigintOne.standard)
 
 expectAssignable<SignalName>('SIGINT')
 expectAssignable<SignalName>('SIGRT1')
@@ -42,6 +42,8 @@ expectNotAssignable<SignalName>('SIGRT32')
 
 expectAssignable<SignalNumber>(1)
 expectNotAssignable<SignalNumber>('1')
+// eslint-disable-next-line @typescript-eslint/no-magic-numbers
+expectNotAssignable<SignalNumber>(999)
 
 expectAssignable<SignalAction>('terminate')
 expectAssignable<SignalAction>('core')
