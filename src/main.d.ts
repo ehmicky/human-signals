@@ -134,7 +134,7 @@ export interface Signal {
 /**
  * Object whose keys are signal names and values are signal objects.
  */
-export declare const signalsByName: { [SignalNameType in SignalName]?: Signal }
+export declare const signalsByName: { [SignalNameType in SignalName]: Signal }
 
 /**
  * Object whose keys are signal numbers and values are signal objects.

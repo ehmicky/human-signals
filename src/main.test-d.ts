@@ -10,14 +10,14 @@ import {
 import { expectAssignable, expectNotAssignable, expectType } from 'tsd'
 
 const sigintSignal = signalsByName.SIGINT
-expectType<Signal | undefined>(sigintSignal)
-expectType<SignalName>(sigintSignal!.name)
-expectType<SignalNumber>(sigintSignal!.number)
-expectType<string>(sigintSignal!.description)
-expectType<boolean>(sigintSignal!.supported)
-expectType<SignalAction>(sigintSignal!.action)
-expectType<boolean>(sigintSignal!.forced)
-expectType<SignalStandard>(sigintSignal!.standard)
+expectType<Signal>(sigintSignal)
+expectType<SignalName>(sigintSignal.name)
+expectType<SignalNumber>(sigintSignal.number)
+expectType<string>(sigintSignal.description)
+expectType<boolean>(sigintSignal.supported)
+expectType<SignalAction>(sigintSignal.action)
+expectType<boolean>(sigintSignal.forced)
+expectType<SignalStandard>(sigintSignal.standard)
 
 const sigintOne = signalsByNumber[1]
 expectType<Signal | undefined>(sigintOne)
