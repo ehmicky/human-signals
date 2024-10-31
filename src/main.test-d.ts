@@ -2,9 +2,9 @@ import {
   signalsByName,
   signalsByNumber,
   type Signal,
-  type SignalNumber,
-  type SignalName,
   type SignalAction,
+  type SignalName,
+  type SignalNumber,
   type SignalStandard,
 } from 'human-signals'
 import { expectAssignable, expectNotAssignable, expectType } from 'tsd'
