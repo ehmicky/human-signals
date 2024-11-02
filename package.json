@@ -54,7 +54,7 @@
     "lib": "src"
   },
   "devDependencies": {
-    "@ehmicky/dev-tasks": "^3.0.24",
+    "@ehmicky/dev-tasks": "^3.0.25",
     "@ehmicky/eslint-config": "^20.0.16",
     "@ehmicky/prettier-config": "^1.0.3",
     "ajv": "^8.17.1",
