@@ -1,3 +1,9 @@
+# 8.0.1
+
+## Documentation
+
+- Improve documentation in `README.md`
+
 # 8.0.0
 
 ## Breaking changes (types)
